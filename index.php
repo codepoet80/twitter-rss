@@ -174,7 +174,7 @@ function remove_urls($text) {
 //RSS Stuff
 function output_rss_header($twitterid, $title, $link, $description, $image) {
 	header('Content-Type: text/xml');
-	$currPath = "http://" . $_SERVER[HTTP_HOST] . $_SERVER[REQUEST_URI];
+	$currPath = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 	$currPath = explode("?", $currPath);
 	$currPath = $currPath[0] . "?twitterid=" . $twitterid;
 	
