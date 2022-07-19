@@ -34,9 +34,8 @@ if ($_SERVER['QUERY_STRING'] != "") {
 }
 
 //Figure out if they're allowed to make this query
-$allowed = true;
+$allowed = false;
 if (isset($config['access_control']) && isset($clientid)) {
-	$allowed = false;
 	$access = $config['access_control'];
 	if (isset($access[$clientid])) {
 		if ($access[$clientid] == "*") {
